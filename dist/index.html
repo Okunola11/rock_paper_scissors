@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper and Scissors</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates&family=Roboto&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/dist/css/main.min.css">
+    <script src="/dist/js/main.js" type="module"></script>
+    <!-- font-family: 'Montserrat Alternates', sans-serif; //This is for the css family rules {for the fonts}
+        font-family: 'Roboto', sans-serif; -->
+</head>
+
+<body>
+    <main>
+        <h1 class="center" tabindex="0">Rock Paper Scissors</h1>
+        <a href="#p1msg" class="skip-link">Skip Scoreboard</a>
+
+        <article id="scoreBoard" class="scoreBoard">
+            <h2 class="offscreen">Score Board</h2>
+
+            <section id="all_time" class="scoreBoard__section">
+                <h3 class="offscreen">All Time Scorer</h3>
+                <div class="scoreBoard__header" aria-hidden="true">
+                    <p><abbr title="Player One">P1</abbr></p>
+                    <p>All Time</p>
+                    <p><abbr title="Computer Player">CP</abbr></p>
+                </div>
+                <div class="scoreBoard__row" role="row">
+                    <div id="p1_all_time_score" class="scoreBoard__score center" role="cell"
+                        aria-label="Player One All Time Wins" tabindex="0">0</div>
+                    <div id="cp_all_time_score" class="scoreBoard__score center" role="cell"
+                        aria-label="Computer All Time Wins" tabindex="0">0</div>
+                </div>
+            </section>
+
+            <section id="session" class="scoreBoard__section">
+                <h3 class="offscreen">Session Scoreboard</h3>
+                <div class="scoreBoard__header" aria-hidden="true">
+                    <p><abbr title="Player One">P1</abbr></p>
+                    <p>Session</p>
+                    <p><abbr title="Computer Player">CP</abbr></p>
+                </div>
+                <div class="scoreBoard__row" role="row">
+                    <div id="p1_session_score" class="scoreBoard__score center" role="cell"
+                        aria-label="Player One Wins This Session" tabindex="0">0</div>
+                    <div id="cp_session_score" class="scoreBoard__score center" role="cell"
+                        aria-label="Computer Wins This Session" tabindex="0">0</div>
+                </div>
+            </section>
+
+        </article>
+
+        <article id="playerBoard" class="playerBoard">
+            <h2 id="p1msg" class="center" aria-label="Player one chooses" tabindex="0">Player One Chooses...</h2>
+            <div id="gameBoard" class="gameBoard">
+                <div id="rock" class="gameBoard__square">
+                    <img src="/img/rock.png" alt="Rock">
+                </div>
+                <div id="paper" class="gameBoard__square">
+                    <img src="/img/paper.png" alt="Paper">
+                </div>
+                <div id="scissors" class="gameBoard__square">
+                    <img src="/img/scissors.png" alt="Scissors">
+                </div>
+            </div>
+        </article>
+
+        <article id="computerBoard" class="computerBoard">
+            <h2 id="cpmsg" class="center">Computer Chooses...</h2>
+            <div id="cp_gameBoard" class="gameBoard">
+                <div id="cp_rock" class="gameBoard__square">
+                    <img src="/img/rock.png" alt="Rock">
+                </div>
+                <div id="cp_paper" class="gameBoard__square">
+                    <img src="/img/paper.png" alt="Paper">
+                </div>
+                <div id="cp_scissors" class="gameBoard__square">
+                    <img src="/img/scissors.png" alt="Scissors">
+                </div>
+            </div>
+        </article>
+    </main>
+    <form>
+        <button id="playAgain" class="playAgain hidden" type="submit">Play Again?</button>
+    </form>
+</body>
+
+</html>
